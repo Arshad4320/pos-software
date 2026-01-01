@@ -10,11 +10,11 @@ const createAccount = async (req: Request, res: Response) => {
       data: result,
     })
   } catch (err) {
-    res.json({
+    res.status(500).json({
       success: false,
-      message: 'something went wrong',
+      message: 'Failed to create account',
+      error: err,
     })
-    console.log(err)
   }
 }
 const getAllAccounts = async (req: Request, res: Response) => {
@@ -26,11 +26,11 @@ const getAllAccounts = async (req: Request, res: Response) => {
       data: result,
     })
   } catch (err) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'something went wrong',
+      error: err,
     })
-    console.log(err)
   }
 }
 const getAccountById = async (req: Request, res: Response) => {
@@ -42,11 +42,11 @@ const getAccountById = async (req: Request, res: Response) => {
       data: result,
     })
   } catch (err) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'something went wrong',
+      error: err,
     })
-    console.log(err)
   }
 }
 const updateAccount = async (req: Request, res: Response) => {
@@ -58,11 +58,11 @@ const updateAccount = async (req: Request, res: Response) => {
       data: result,
     })
   } catch (err) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'something went wrong',
+      error: err,
     })
-    console.log(err)
   }
 }
 const deleteAccount = async (req: Request, res: Response) => {
@@ -75,11 +75,11 @@ const deleteAccount = async (req: Request, res: Response) => {
       data: result,
     })
   } catch (err) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'something went wrong',
+      error: err,
     })
-    console.log(err)
   }
 }
 
