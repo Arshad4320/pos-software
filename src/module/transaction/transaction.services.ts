@@ -1,7 +1,8 @@
 import mongoose from 'mongoose'
-import { ITransaction } from './transaction.interface'
+
 import { TransactionModel } from './transaction.model'
 import { AccountModel } from '../accounts/accounts.model'
+import { ITransaction } from './transaction.interface'
 
 const createTransaction = async (payload: ITransaction) => {
   const session = await mongoose.startSession()

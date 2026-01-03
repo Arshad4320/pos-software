@@ -1,6 +1,7 @@
 import { model, Schema } from 'mongoose'
+import { ITransaction } from './transaction.interface'
 
-const transactionSchema = new Schema(
+const transactionSchema = new Schema<ITransaction>(
   {
     date: {
       type: Date,
