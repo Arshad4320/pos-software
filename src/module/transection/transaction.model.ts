@@ -15,7 +15,7 @@ const transactionSchema = new Schema(
     transactionType: {
       type: String,
       required: true,
-      enum: ['sales', 'purchase', 'receipt', 'payment'],
+      enum: ['Sales', 'Purchase', 'Receipt', 'Payment'],
     },
     debitAccount: {
       type: Schema.Types.ObjectId,
