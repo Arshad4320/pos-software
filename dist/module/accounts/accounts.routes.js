@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.accountRoute = void 0;
+const express_1 = require("express");
+const accounts_controller_1 = require("./accounts.controller");
+const router = (0, express_1.Router)();
+router.post('/create-account', accounts_controller_1.AccountController.createAccount);
+router.get('/accounts', accounts_controller_1.AccountController.getAllAccounts);
+router.get('/account/:id', accounts_controller_1.AccountController.getAccountById);
+router.patch('/update-account/:id', accounts_controller_1.AccountController.updateAccount);
+router.delete('/delete-account/:id', accounts_controller_1.AccountController.deleteAccount);
+exports.accountRoute = router;
